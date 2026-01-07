@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nehru Zoo Park Navigation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: sans-serif;
+            background-image: url('Zoobg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        h1, h3 { 
+            color: #8B0000; 
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+        #searchInput {
+            display: block;
+            margin: 0 auto 20px;
+            padding: 10px;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        #locations { 
+            list-style-type: none; 
+            padding: 0; 
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+        #locations li { 
+            margin-bottom: 10px; 
+        }
+        #locations li a {
+            display: block;
+            padding: 12px 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        #locations li a:hover { 
+            background-color: #e0e0e0; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Nehru Zoological Park<br/>Hyderabad</h1>
+
+    <h3 style="display: flex; align-items: center;">
+        <img alt="Touch Icon" src="touch.png" style="margin-left: 50px; height: 50px;" />
+        Touch any location below<br/>to Navigate inside the zoo
+    </h3>
+
+    <input id="searchInput" onkeyup="filterLocations()" placeholder="Search for a location to navigate" type="text" />
+
+    <div style="max-height: 620px; overflow-y: auto; padding: 10px; border-radius: 10px;">
+        <ul id="locations" style="list-style-type: none; padding: 0;">
+            <li><a href="https://www.google.com/maps?q=17.35072,78.4513" target="_blank">Zoo- Kbn bike point </a></li>
+            <li><a href="https://www.google.com/maps?q=17.35049,78.45111" target="_blank">Zoo- BOV Parking</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35088,78.45099" target="_blank">Zoo- Golden Jubliee Pylon</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35037,78.45074" target="_blank">Zoo Aquarium</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35083,78.45049" target="_blank">Zoo- Battery Operated Vehicle Booking Counter</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35031,78.45175" target="_blank">Zoo- Khadeer Snacks</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35036,78.45162" target="_blank">Zoo- Habeeb chesis and works</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34852,78.44999" target="_blank">Zoo- Primate Park</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34791,78.4491" target="_blank">Zoo- Dinosaur Park</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34572,78.44651" target="_blank">Zoo- Boating Ticket Counter</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34907,78.44893" target="_blank">Zoo- Butterfly Park</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34853,78.44785" target="_blank">Zoo- Batery Operated Vechile Halt-1</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34957,78.44907" target="_blank">Zoo- Wetland Habitat </a></li>
+            <li><a href="https://www.google.com/maps?q=17.3492,78.44846" target="_blank">Zoo- White Tiger</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34937,78.44755" target="_blank">Zoo- Virat Hanuman Mandir</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34951,78.44697" target="_blank">Zoo- Canine Complex</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34944,78.44691" target="_blank">Zoo- Hyena</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34778,78.44566" target="_blank">Zoo- Toilet comples-4</a></li>
+            <li><a href="https://www.google.com/maps?q=17.3501,78.44678" target="_blank">Zoo- view point bridge</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35471,78.44933" target="_blank">Zoo- Eagles and hawks</a></li>
+            <li><a href="https://www.google.com/maps?q=17.3507,78.44943" target="_blank">Zoo train Booking and Departure</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35049,78.44946" target="_blank">Zoo- Food Court Zoo park</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35173,78.44957" target="_blank">Zoo- Parrots</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35231,78.44956" target="_blank">Zoo- Aviary</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35516,78.45007" target="_blank">Zoo hospital</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35343,78.43948" target="_blank">Zoo- Tiger safari</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34996,78.44195" target="_blank">Zoo- Safari Point</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34729,78.44612" target="_blank">Zoo- Elephant Park</a></li>
+            <li><a href="https://www.google.com/maps/place/17%C2%B021'04.4%22N+78%C2%B026'44.1%22E/@17.3514262,78.4447795,155m/data=!3m1!1e3!4m4!3m3!8m2!3d17.3512099!4d78.4455924?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Rhino</a></li>
+            <li><a href="https://www.google.com/maps/place/17%C2%B021'03.6%22N+78%C2%B026'43.3%22E/@17.3509873,78.4441473,198m/data=!3m2!1e3!4b1!4m10!1m5!3m4!2zMTfCsDIxJzA0LjQiTiA3OMKwMjYnNDQuMSJF!8m2!3d17.3512099!4d78.4455924!3m3!8m2!3d17.350986!4d78.445365?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Hippo</a></li>
+            <li><a href="https://www.google.com/maps/place/17%C2%B021'10.6%22N+78%C2%B026'50.9%22E/@17.352944,78.44746,18z/data=!3m1!4b1!4m4!3m3!8m2!3d17.352944!4d78.44746?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Bears Section</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34883,78.44684" target="_blank">Zoo- Deer Park</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35237,78.44785" target="_blank">Zoo- House Sparrow</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35191,78.44081" target="_blank">Zoo- Lion Safari</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35214,78.44372" target="_blank">Zoo- Bear Safari</a></li>
+            <li><a href="https://www.google.com/maps?q=17.34837,78.44254" target="_blank">Zoo- Chaitra Hotel</a></li>
+            <li><a href="https://www.google.com/maps/place/17%C2%B021'08.4%22N+78%C2%B026'46.3%22E/@17.3524224,78.445927,114m/data=!3m1!1e3!4m4!3m3!8m2!3d17.3523383!4d78.4461939?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Rhino Dairy Parlour</a></li>
+            <li><a href="https://www.google.com/maps?q=17.354,78.44792" target="_blank">Zoo- Giraffe</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35146,78.45047" target="_blank">Zoo- Natural History Museum</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35442,78.45189" target="_blank">Zoo- Reptile House</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35256,78.45092" target="_blank">Zoo- Toilet Complex 1</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35308,78.4512" target="_blank">Zoo- Nocturnal Animals</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35476,78.45108" target="_blank">Zoo- Crocodiles</a></li>
+            <li><a href="https://www.google.com/maps?q=17.3543,78.45337" target="_blank">Zoo- Visitors Parking</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35455,78.45286" target="_blank">Zoo- Husen Fruit Shop</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35208,78.44767" target="_blank">Zoo- Rhea Americana</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35232,78.44566" target="_blank">Zoo- Mrugavani ZooPark foodcourt Counter</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35224,78.44544" target="_blank">Zoo- Toilets</a></li>
+            <li><a href="https://www.google.com/maps?q=17.35173,78.44581" target="_blank">Zoo- Afiya Children Sweets and General store</a></li>
+            <li><a href="https://www.google.com/maps/place/ZenStore/@17.3482229,78.4466759,17z/data=!4m6!3m5!1s0x3bcb97a5a61fec73:0xc24c1109bd05f650!8m2!3d17.3491855!4d78.4491328!16s%2Fg%2F11x31wcxd3?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Zen store</a></li>
+            <li><a href="https://www.google.com/maps/place/17%C2%B021'08.2%22N+78%C2%B026'48.7%22E/@17.3522458,78.4467602,58m/data=!3m1!1e3!4m4!3m3!8m2!3d17.3522778!4d78.4468611?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Ostrich</a></li>
+            <li><a href="https://www.google.com/maps/place/17%C2%B021'03.6%22N+78%C2%B026'47.1%22E/@17.3510131,78.4415471,791m/data=!3m2!1e3!4b1!4m10!1m5!3m4!2zMTfCsDIxJzAzLjgiTiA3OMKwMjYnNDcuNSJF!8m2!3d17.3510442!4d78.4465389!3m3!8m2!3d17.351008!4d78.446418?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Lion Section</a></li>
+            <li><a href="https://www.google.com/maps/place/17%C2%B021'02.5%22N+78%C2%B026'45.6%22E/@17.350678,78.4458337,86m/data=!3m1!1e3!4m4!3m3!8m2!3d17.350688!4d78.4460041?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Leopard</a></li>
+            <li><a href="https://www.google.com/maps/place/17%C2%B020'59.4%22N+78%C2%B026'51.6%22E/@17.3497906,78.4471966,175m/data=!3m1!1e3!4m4!3m3!8m2!3d17.3498265!4d78.4476584?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Bengal Tiger</a></li>
+            <li><a href="https://www.google.com/maps/place/17%C2%B021'14.6%22N+78%C2%B026'47.3%22E/@17.3540514,78.4438845,791m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d17.3540514!4d78.4464594?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Deer Park</a></li>
+            <li><a href="https://www.google.com/maps/place/17%C2%B021'09.3%22N+78%C2%B027'00.6%22E/@17.3525994,78.4498404,123m/data=!3m1!1e3!4m4!3m3!8m2!3d17.3525918!4d78.4501719?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Reptile House Entry</a></li>	
+            <li><a href="https://www.google.com/maps/place/17%C2%B021'06.6%22N+78%C2%B027'00.4%22E/@17.3518237,78.447536,791m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d17.3518237!4d78.4501109?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Otters</a></li>	
+            <li><a href="https://www.google.com/maps/place/17%C2%B021'07.0%22N+78%C2%B026'38.7%22E/@17.3519511,78.4415088,791m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d17.3519511!4d78.4440837?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Zoo- Byson Safari</a></li>	
+        </ul>
+    </div>
+
+    <script>
+        // Function to filter the list
+        function filterLocations() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const ul = document.getElementById('locations');
+            const li = ul.getElementsByTagName('li');
+            for (let i = 0; i < li.length; i++) {
+                const a = li[i].getElementsByTagName('a')[0];
+                const textValue = a.textContent || a.innerText;
+                li[i].style.display = textValue.toLowerCase().includes(filter) ? "" : "none";
+            }
+        }
+
+        // Function to speak text
+        function speak(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            speechSynthesis.speak(utterance);
+        }
+
+        // Add speech synthesis and delayed redirect on list item click
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll("#locations li a");
+            links.forEach(link => {
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+
+                    // 1. Handle Speech Synthesis
+                    const locationName = link.textContent.trim();
+                    let cleanLocationName = locationName;
+                    if (locationName.startsWith("Zoo- ")) {
+                        cleanLocationName = locationName.substring("Zoo- ".length);
+                    }
+                    const phraseToSpeak = "navigating to " + cleanLocationName;
+                    speak(phraseToSpeak);
+
+                    // 2. Prepare for Delayed Redirect
+                    const targetUrl = link.href;
+                    const targetWindow = link.target;
+
+                    // Optional: Provide visual feedback to the user
+                    const originalLinkText = link.textContent;
+                    link.style.color = "orange";
+
+                    // 3. Set the Timeout for Redirection
+                    setTimeout(() => {
+                        if (targetWindow === '_blank') {
+                            window.open(targetUrl, '_blank');
+                        } else {
+                            window.location.href = targetUrl;
+                        }
+
+                        if (targetWindow === '_blank') {
+                            link.textContent = originalLinkText;
+                            link.style.color = "";
+                        }
+                    }, 3500);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
